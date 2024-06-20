@@ -1,6 +1,5 @@
 require('newrelic');
-
-// server.js
+require('dotenv').config();
 
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -9,24 +8,20 @@ const port = process.env.PORT || 3000; // Use the PORT environment variable prov
 
 // Middleware
 app.use(bodyParser.json()); // Parse JSON bodies
+app.use(express.json());
 
 // Basic Route
 app.get('/', (req, res) => {
   res.send('Welcome to DAILY3 Backend!');
 });
 
+// Import API routes
+const apiRoutes = require('./routes/api');
+
+// Use API routes
+app.use('/api', apiRoutes);
+
 // Start Server
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-// Example route for fetching movement data
-app.get('/api/movement', (req, res) => {
-    // Logic to fetch movement data
-    res.json({ message: 'Fetching movement data' });
-  });
-  
-  // Example route for user data
-  app.post('/api/user', (req, res) => {
-    // Logic to handle user data
-    res.json({ message: 'User data received' });
-  });  
