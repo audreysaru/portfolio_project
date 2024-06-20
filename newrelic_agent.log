@@ -45,3 +45,14 @@
 {"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":17144,"time":"2024-06-20T13:18:34.884Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"log_event_data\":833,\"analytic_event_data\":833,\"custom_event_data\":250}}"}
 {"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":17144,"time":"2024-06-20T13:18:34.894Z","msg":"Agent state changed from connected to started."}
 {"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":17144,"time":"2024-06-20T13:18:35.899Z","msg":"Starting initial 1000ms harvest."}
+{"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":18832,"time":"2024-06-20T15:11:27.744Z","msg":"Using New Relic for Node.js. Agent version: 11.19.0; Node version: v20.14.0."}
+{"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":18832,"time":"2024-06-20T15:11:28.090Z","msg":"Using AsyncLocalContextManager"}
+{"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":18832,"time":"2024-06-20T15:11:28.242Z","msg":"Agent state changed from stopped to starting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":18832,"time":"2024-06-20T15:11:28.261Z","msg":"Starting New Relic for Node.js connection process."}
+{"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":18832,"time":"2024-06-20T15:11:28.262Z","msg":"Agent state changed from starting to connecting."}
+{"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":18832,"time":"2024-06-20T15:11:31.954Z","msg":"Agent state changed from connecting to connected."}
+{"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":18832,"time":"2024-06-20T15:11:31.954Z","msg":"Connected to collector.newrelic.com:443 with agent run ID BS1QhbHEI6SvAESEF0KK7TxmdEb8AAgBAAAnIQEAAEmQAgBDOYNTAwAHMTEuMTkuMAAKYXVkcmV5c2FydQAGRGFpbHkz.","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":18832,"time":"2024-06-20T15:11:31.955Z","msg":"Reporting to: https://rpm.newrelic.com/accounts/4490263/applications/1127842643","component":"collector_api"}
+{"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":18832,"time":"2024-06-20T15:11:31.957Z","msg":"Valid event_harvest_config received. Updating harvest cycles. {\"report_period_ms\":5000,\"harvest_limits\":{\"error_event_data\":8,\"log_event_data\":833,\"analytic_event_data\":833,\"custom_event_data\":250}}"}
+{"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":18832,"time":"2024-06-20T15:11:31.967Z","msg":"Agent state changed from connected to started."}
+{"v":0,"level":30,"name":"newrelic","hostname":"audreysaru","pid":18832,"time":"2024-06-20T15:11:32.981Z","msg":"Starting initial 1000ms harvest."}

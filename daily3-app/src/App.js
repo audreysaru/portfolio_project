@@ -27,8 +27,8 @@ export default App;
 
 
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Switch } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+//import { Switch } from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
 import Home from './pages/Home';
@@ -41,12 +41,12 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Switch>
-          <Route path="/user-profile" component={UserProfile} />
+        <Routes>
+         <Route path="/userprofile" component={UserProfile} />
           <Route path="/movement" component={Movement} />
           <Route path="/" exact component={Home} />
-        </Switch>
-        <Footer /> {/* Render the Footer component here */}
+        </Routes>
+        <Footer />
       </div>
     </Router>
   );
