@@ -4,14 +4,9 @@
  * New Relic agent configuration.
  */
 exports.config = {
-  /**
-   * Array of app names.
-   */
   app_name: ['Daily3'],
-  /**
-   * New Relic license key.
-   */
-  license_key: process.env.NEW_RELIC_LICENSE_KEY,
+  //license_key: process.env.NEW_RELIC_LICENSE_KEY,
+  license_key: '65ef07848d55e33270d8ac64dfe32da8FFFFNRAL',
   logging: {
     /**
      * Level at which to log. 'trace' is most useful to New Relic when diagnosing
