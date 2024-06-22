@@ -16,9 +16,22 @@ app.use(cors());
 app.use(bodyParser.json()); // Parse JSON bodies
 app.use(express.json());
 
+// Serve static files from the React frontend app
+app.use(express.static(path.join(__dirname, '../frontend/build')));
+
 // Basic Route
 app.get('/', (req, res) => {
   res.send('Welcome to DAILY3 Backend!');
+});
+
+// API routes
+app.get('/api/*', (req, res) => {
+  res.json({ message: 'API endpoint' });
+});
+
+// The "catchall" handler: for any request that doesn't match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/build', 'index.html'));
 });
 
 // Import API routes
