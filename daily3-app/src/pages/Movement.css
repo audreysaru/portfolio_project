@@ -1,26 +1,37 @@
 .movement {
-    padding: 40px 0;
-    text-align: center;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .activity {
-    margin-top: 20px;
-    border: 1px solid #1dd053;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
+  padding: 40px 0;
+  text-align: center;
+}
+
+.movement .container {  /* Make the .container class specific to movement */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.activity {
+  margin-top: 20px;
+  border: 1px solid #1dd053;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.activity h2 {
+  font-size: 1.5rem;
+}
+
+.activity p {
+  font-size: 1.2rem;
+  color: #1d16a8;
+}
+
+/* responsive design */
+@media (max-width: 768px) {
   .activity h2 {
-    font-size: 1.5rem;
-  }
-  
-  .activity p {
     font-size: 1.2rem;
-    color: #1d16a8;
-  }  
+  }
+
+  .activity p {
+    font-size: 1rem;
+  }
+}

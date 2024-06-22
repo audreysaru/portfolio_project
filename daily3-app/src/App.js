@@ -28,7 +28,6 @@ export default App;
 
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-//import { Switch } from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
 import Home from './pages/Home';
@@ -42,9 +41,9 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-         <Route path="/userprofile" component={UserProfile} />
-          <Route path="/movement" component={Movement} />
-          <Route path="/" exact component={Home} />
+          <Route path="/userprofile" element={<UserProfile />} />
+          <Route path="/movement" element={<Movement />} />
+          <Route path="/" element={<Home />} />
         </Routes>
         <Footer />
       </div>

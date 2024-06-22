@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Movement.css';
 function Movement() {
   return (
     <div className="movement">
