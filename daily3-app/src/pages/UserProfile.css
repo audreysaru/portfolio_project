@@ -3,7 +3,7 @@
   text-align: center;
 }
 
-.user-profile .container {
+.container {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 20px;
@@ -13,23 +13,18 @@
   margin-bottom: 20px;
 }
 
-.profile-info h2 {
-  font-size: 1.5rem;
-  color: #333;
+.profile-info .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
-.profile-info p {
-  font-size: 1rem;
-  color: #666;
+.update-avatar {
+  margin-top: 20px;
 }
 
 .activity-history {
   margin-top: 20px;
-}
-
-.activity-history h2 {
-  font-size: 1.5rem;
-  color: #333;
 }
 
 .activity-history ul {
@@ -39,8 +34,4 @@
 
 .activity-history ul li {
   margin-bottom: 10px;
-  font-size: 1rem;
-  color: #555;
-  padding: 5px 0;
-  border-bottom: 1px solid #ddd;
 }
