@@ -1,7 +1,0 @@
-NODE_ENV=production
-PORT=3000
-
-API_KEY=dcf89c3dc571c5ae4faadd236b5619f0ed0e1a8df05f1ac9cfb8c1667fa5d8be
-DATABASE_URL=postgres://uf8mo7do43qjpu:pc2ccdadb1cde6d14a80a5135096172dc5e204a0ee1efae4d24ac2e5eee2d1571@cd5gks8n4kb20g.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d1vlde81nnt2m6
-NEW_RELIC_LICENSE_KEY=65ef07848d55e33270d8ac64dfe32da8FFFFNRAL
-NEW_RELIC_APP_NAME=Daily3

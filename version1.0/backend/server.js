@@ -35,7 +35,7 @@ app.get('*', (req, res) => {
 });
 
 // Import API routes
-const apiRoutes = require('./routes/api');
+const apiRoutes = require('../../routes/api');
 
 // Use API routes
 app.use('/api', apiRoutes);
