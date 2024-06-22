@@ -16,3 +16,11 @@ const PORT = config.port || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+const { sequelize } = require('./models');
+
+sequelize.sync().then(() => {
+    console.log('Database synced');
+}).catch((err) => {
+    console.error('Unable to sync the database:', err);
+});
