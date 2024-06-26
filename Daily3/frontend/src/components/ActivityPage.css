@@ -1,0 +1,17 @@
+.activity-page {
+    text-align: center;
+}
+
+.youtube-container {
+    margin: 20px 0;
+}
+
+.activity-controls {
+    margin-top: 20px;
+}
+
+.activity-controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}

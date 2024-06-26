@@ -1,26 +1,29 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const userRoutes = require('./routes/userRoutes');
-const config = require('./config');
-
-const app = express();
-
-app.use(express.json());
-app.use('/api/users', userRoutes);
-
-mongoose.connect(config.dbUri, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('MongoDB connected'))
-    .catch(err => console.log(err));
-
-const PORT = config.port || 5000;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
-
+const bodyParser = require('body-parser');
+const cors = require('cors');
 const { sequelize } = require('./models');
 
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+
+app.use((req, res, next) => {
+    if (req.headers['x-forwarded-proto'] !== 'https') {
+        return res.redirect(`https://${req.headers.host}${req.url}`);
+    }
+    next();
+});
+
+const authRoutes = require('./routes/auth');
+const activitiesRoutes = require('./routes/activities');
+
+app.use('/api', authRoutes);
+app.use('/api', activitiesRoutes);
+
 sequelize.sync().then(() => {
-    console.log('Database synced');
-}).catch((err) => {
-    console.error('Unable to sync the database:', err);
+    app.listen(process.env.PORT || 3000, () => {
+        console.log('Server is running...');
+    });
+}).catch(err => {
+    console.error('Unable to connect to the database:', err);
 });

@@ -1,16 +1,15 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+const API_URL = 'https://your-backend-app-name.herokuapp.com/api';
 
-API.interceptors.request.use(req => {
-    if (localStorage.getItem('token')) {
-        req.headers.Authorization = localStorage.getItem('token');
-    }
-    return req;
+export const signup = (userData) => axios.post(`${API_URL}/signup`, userData);
+export const login = (userData) => axios.post(`${API_URL}/login`, userData);
+export const getProfile = () => axios.get(`${API_URL}/profile`, {
+    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
 });
-
-export const signup = (formData) => API.post('/users/signup', formData);
-export const login = (formData) => API.post('/users/login', formData);
-export const getProfile = () => API.get('/users/profile');
-export const updateProfile = (formData) => API.put('/users/profile', formData);
-export const addActivityHistory = (activity) => API.post('/users/activity', { activity });
+export const updateProfile = (userData) => axios.put(`${API_URL}/profile`, userData, {
+    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+});
+export const addActivityHistory = (activity) => axios.post(`${API_URL}/activities`, { activity }, {
+    headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+});
