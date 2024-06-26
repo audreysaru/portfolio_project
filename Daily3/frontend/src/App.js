@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import Movement from './pages/Movement';
 import Meditation from './pages/Meditation';
 import MorningPages from './pages/MorningPages';
@@ -18,7 +18,7 @@ const App = () => {
             setHasSeenLandingPage(true);
         }
     }, []);
-    
+
     return (
         <Router>
             <Switch>

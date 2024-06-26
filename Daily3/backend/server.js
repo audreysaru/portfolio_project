@@ -16,9 +16,13 @@ app.use((req, res, next) => {
 
 const authRoutes = require('./routes/auth');
 const activitiesRoutes = require('./routes/activities');
+const remindersRoutes = require('./routes/reminders');
+const userRoutes = require('./routes/userRoutes');
 
 app.use('/api', authRoutes);
 app.use('/api', activitiesRoutes);
+app.use('/api/reminders', remindersRoutes);
+app.use('/api/users', userRoutes);
 
 sequelize.sync().then(() => {
     app.listen(process.env.PORT || 3000, () => {

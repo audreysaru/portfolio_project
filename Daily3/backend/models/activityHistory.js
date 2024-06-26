@@ -1,16 +1,23 @@
 const { DataTypes } = require('sequelize');
+const sequelize = require('../config/database');
 
-module.exports = (sequelize) => {
-    const ActivityHistory = sequelize.define('ActivityHistory', {
-        activity: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        date: {
-            type: DataTypes.DATE,
-            defaultValue: DataTypes.NOW
+const ActivityHistory = sequelize.define('ActivityHistory', {
+    user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: 'Users',
+            key: 'id'
         }
-    });
+    },
+    activity: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    date: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW
+    }
+});
 
-    return ActivityHistory;
-};
+module.exports = ActivityHistory;

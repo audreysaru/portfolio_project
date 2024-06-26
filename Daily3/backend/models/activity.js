@@ -6,8 +6,14 @@ const Activity = sequelize.define('Activity', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    description: DataTypes.TEXT,
-    video_url: DataTypes.TEXT
+    description: {
+        type: DataTypes.TEXT,
+        allowNull: true
+    },
+    video_url: {
+        type: DataTypes.TEXT,
+        allowNull: true
+    }
 }, {
     timestamps: true
 });

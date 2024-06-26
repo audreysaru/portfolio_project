@@ -1,20 +1,18 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
-const User = require('./user');
-const Activity = require('./activity');
 
 const UserActivity = sequelize.define('UserActivity', {
     user_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: User,
+            model: 'Users',
             key: 'id'
         }
     },
     activity_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: Activity,
+            model: 'Activities',
             key: 'id'
         }
     },
@@ -25,8 +23,5 @@ const UserActivity = sequelize.define('UserActivity', {
 }, {
     timestamps: true
 });
-
-UserActivity.belongsTo(User, { foreignKey: 'user_id' });
-UserActivity.belongsTo(Activity, { foreignKey: 'activity_id' });
 
 module.exports = UserActivity;
