@@ -1,20 +1,15 @@
 {
     "name": "daily3",
     "version": "1.0.0",
-    "description": "Monorepo for Daily3 app with separate frontend and backend",
     "private": true,
     "scripts": {
-        "install": "npm install --prefix daily3-backend && npm install --prefix daily3-frontend",
-        "start": "npm run start:daily3-backend & npm run start:daily3-frontend",
-        "start:backend": "npm --prefix daily3-backend run start",
-        "start:frontend": "npm --prefix daily3-frontend run start",
-        "build": "npm run build:daily3-backend && npm run build:daily3-frontend",
-        "build:backend": "npm --prefix daily3-backend run build",
-        "build:frontend": "npm --prefix daily3-frontend run build",
-        "heroku-postbuild": "npm run build"
+      "start:backend": "cd backend && npm start",
+      "start:frontend": "cd frontend && npm start",
+      "heroku-postbuild": "cd backend && npm install && cd ../frontend && npm install"
     },
     "engines": {
-        "node": ">=14.0.0",
-        "npm": ">=6.0.0"
+      "node": ">=14.0.0",
+      "npm": ">=6.0.0"
     }
-}
+  }
+  
