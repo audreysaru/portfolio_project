@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
+const argon2 = require('argon2');
 const sequelize = require('../config/database');
 
 const User = sequelize.define('User', {
@@ -36,8 +36,7 @@ const User = sequelize.define('User', {
 });
 
 User.beforeCreate(async (user) => {
-    const salt = await bcrypt.genSalt(10);
-    user.password = await bcrypt.hash(user.password, salt);
+    user.password = await argon2.hash(user.password);
 });
 
 module.exports = (sequelize) => User;

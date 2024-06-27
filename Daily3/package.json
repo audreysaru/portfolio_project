@@ -3,13 +3,12 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-      "start:backend": "cd Daily3/backend && npm start",
-      "start:frontend": "cd Daily3/frontend && npm start",
-      "heroku-postbuild": "cd Daily3/backend && npm install && cd ../frontend && npm install && npm run build"
+        "start:backend": "cd backend && npm start",
+        "start:frontend": "cd frontend && npm start",
+        "heroku-postbuild": "cd backend && npm install && cd ../frontend && npm install && npm run build"
     },
     "engines": {
-      "node": ">=14.0.0",
-      "npm": ">=6.0.0"
+        "node": "14.x",
+        "npm": "6.x"
     }
-  }
-  
+}
