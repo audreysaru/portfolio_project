@@ -25,7 +25,7 @@ const LandingPage = () => {
 
     const handleSignupRedirect = () => {
         localStorage.setItem('hasSeenLandingPage', 'true');
-        history.push('/signup');
+        navigate('/signup');
     };
 
     return (
