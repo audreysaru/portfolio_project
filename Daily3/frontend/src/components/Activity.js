@@ -1,4 +1,5 @@
 import React from 'react';
+import './Activity.css';
 
 const Activity = ({ activity, onNext, onDone }) => {
     return (

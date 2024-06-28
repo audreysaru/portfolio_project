@@ -1,0 +1,10 @@
+.youtube-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.youtube-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+}

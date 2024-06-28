@@ -1,0 +1,33 @@
+.activity-page {
+    padding: 20px;
+    text-align: center;
+}
+
+.timer-setup {
+    margin-bottom: 20px;
+}
+
+.timer-setup label {
+    font-size: 1.2em;
+}
+
+.timer-setup input {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 1em;
+    width: 50px;
+}
+
+.activity-controls button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.activity-controls button:hover {
+    background-color: #0056b3;
+}

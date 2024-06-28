@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getProfile, updateProfile } from '../api';
+import './Profile.css';
 
 const Profile = () => {
     const [formData, setFormData] = useState({

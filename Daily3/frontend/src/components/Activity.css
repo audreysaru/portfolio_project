@@ -1,0 +1,30 @@
+.activity-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.activity-container video {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+}
+
+.activity-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.activity-buttons button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.activity-buttons button:hover {
+    background-color: #0056b3;
+}

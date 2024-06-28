@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import './MorningPages.css';
 
 const MorningPages = () => {
     const history = useHistory();

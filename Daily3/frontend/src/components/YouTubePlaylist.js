@@ -1,4 +1,5 @@
 import React from 'react';
+import './YouTubePlaylist.css';
 
 const YouTubePlaylist = ({ playlistId }) => {
     return (
