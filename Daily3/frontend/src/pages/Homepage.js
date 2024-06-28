@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import jwtDecode from 'jwt-decode';
 import { getProfile, addActivityHistory } from '../api';
 import Movement from './Movement';
 import Meditation from './Meditation';
