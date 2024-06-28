@@ -4,6 +4,7 @@ import { getProfile, addActivityHistory } from '../api';
 import Movement from './Movement';
 import Meditation from './Meditation';
 import MorningPages from './MorningPages';
+import './Homepage.css';
 
 const Homepage = () => {
     const [user, setUser] = useState(null);
