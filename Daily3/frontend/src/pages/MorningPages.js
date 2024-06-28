@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './MorningPages.css';
 
 const MorningPages = () => {
-    const history = useHistory();
+    const navigate = useNavigate();
     const [timer, setTimer] = useState(0);
 
     const handleTimerChange = (e) => {
@@ -11,7 +11,7 @@ const MorningPages = () => {
     };
 
     const handleDone = () => {
-        history.push('/');
+        navigate('/');
     };
 
     return (

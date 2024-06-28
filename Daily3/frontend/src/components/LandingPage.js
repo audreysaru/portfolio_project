@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './LandingPage.css';
 
 const LandingPage = () => {
     const [slideIndex, setSlideIndex] = useState(0);
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const slides = [
         {
