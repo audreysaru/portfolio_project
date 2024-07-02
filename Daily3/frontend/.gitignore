@@ -9,9 +9,6 @@ dist/
 .vscode/
 *.code-workspace
 
-# macOS specific files
-.DS_Store
-
 # Environment-specific files
 .env.local
 .env.development.local
