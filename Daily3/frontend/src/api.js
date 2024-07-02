@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://daily3-backend-014614ee701a.herokuapp.com/api';
+const API_URL = '/api';
 
 export const signup = (userData) => axios.post(`${API_URL}/signup`, userData);
 export const login = (userData) => axios.post(`${API_URL}/login`, userData);
