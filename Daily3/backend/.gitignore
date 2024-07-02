@@ -9,6 +9,9 @@ logs/
 dist/
 build/
 
+#dependencies
+/node_modules
+
 # IDE files (if using Visual Studio Code, for example)
 .vscode/
 *.code-workspace

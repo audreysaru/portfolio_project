@@ -5,6 +5,9 @@
 build/
 dist/
 
+#dependencies
+/node_modules
+
 # IDE files
 .vscode/
 *.code-workspace
