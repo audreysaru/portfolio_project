@@ -9,12 +9,12 @@ const LandingPage = () => {
     const slides = [
         {
             id: 1,
-            image: '../assets/images/welcome.jpg', // Replace with your actual image path
+            image: '../assets/images/welcome.jpg',
             text: 'Elevate your mood, energy, and focus through the Daily 3 activities.',
         },
         {
             id: 2,
-            image: '../assets/images/get-started.jpg', // Replace with your actual image path
+            image: '../assets/images/get-started.jpg',
             text: 'Get started with Daily3 today!',
         },
     ];

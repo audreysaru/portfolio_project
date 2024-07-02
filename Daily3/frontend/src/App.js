@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Movement from './pages/Movement';
 import Meditation from './pages/Meditation';
 import MorningPages from './pages/MorningPages';
@@ -21,26 +21,24 @@ const App = () => {
     }, []);
 
     return (
-        <Router>
-            <Routes>
-                <Route path="/landing" element={<LandingPage />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/login" element={<Login />} />
-                
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Homepage />} />
-                    <Route path="profile" element={<Profile />} />
-                    <Route path="movement" element={<Movement />} />
-                    <Route path="meditation" element={<Meditation />} />
-                    <Route path="morning-pages" element={<MorningPages />} />
-                </Route>
+        <Routes>
+            <Route path="/landing" element={<LandingPage />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            
+            <Route path="/" element={<Layout />}>
+                <Route index element={<Homepage />} />
+                <Route path="profile" element={<Profile />} />
+                <Route path="movement" element={<Movement />} />
+                <Route path="meditation" element={<Meditation />} />
+                <Route path="morning-pages" element={<MorningPages />} />
+            </Route>
 
-                <Route
-                    path="*"
-                    element={<Navigate to={hasSeenLandingPage ? "/login" : "/landing"} />}
-                />
-            </Routes>
-        </Router>
+            <Route
+                path="*"
+                element={<Navigate to={hasSeenLandingPage ? "/login" : "/landing"} />}
+            />
+        </Routes>
     );
 };
 

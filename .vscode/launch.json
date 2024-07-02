@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${file}"
+        },
+        {
+            "name": "Attach to Direct iOS - Experimental",
+            "cwd": "${workspaceFolder}",
+            "type": "reactnativedirect",
+            "request": "attach",
+            "platform": "ios",
+            "useHermesEngine": false,
+            "port": 9221,
+        }
+    ],
+    "settings": {
+		"react-native.workspace.exclude": [
+			"portfolio_project"
+		]
+	},
+    "react-native-tools": {
+            "logLevel": "Trace"
+        }
+}
