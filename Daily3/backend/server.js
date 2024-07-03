@@ -11,6 +11,7 @@ app.use(cors({
 }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use((req, res, next) => {
     if (req.headers['x-forwarded-proto'] !== 'https') {
@@ -24,7 +25,7 @@ const activitiesRoutes = require('./routes/activities');
 const remindersRoutes = require('./routes/reminders');
 const userRoutes = require('./routes/userRoutes');
 
-app.use('/api/auth', authRoutes);
+app.use('/api', authRoutes);
 app.use('/api', activitiesRoutes);
 app.use('/api/reminders', remindersRoutes);
 app.use('/api/users', userRoutes);
