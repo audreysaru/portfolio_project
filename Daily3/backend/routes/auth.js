@@ -34,7 +34,7 @@ router.post('/login', async (req, res) => {
     }
 });
 
-router.get('/profile', async (req, res) => {
+/*router.get('/profile', async (req, res) => {
     try {
         const authHeader = req.headers['authorization'];
         const token = authHeader && authHeader.split(' ')[1];
@@ -47,6 +47,18 @@ router.get('/profile', async (req, res) => {
         });
     } catch (error) {
         res.status(400).json({ error: error.message });
+    }
+});*/
+
+router.get('/profile', async (req, res) => {
+    try {
+        const user = await User.findOne({ where: { email } });
+        if (!user) {
+            return res.status(404).json({ message: 'User profile not found' });
+        }
+        res.json(user);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
     }
 });
 
