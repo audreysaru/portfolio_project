@@ -12,7 +12,7 @@ const sequelize = new Sequelize(process.env.DATABASE_URL, {
     }
 });
 
-const User = require('./user')(sequelize);
+const User = require('./user');
 const ActivityHistory = require('./activityHistory');
 const Activity = require('./activity');
 const UserActivity = require('./userActivity');
