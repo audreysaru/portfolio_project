@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
     }
 });*/
 
-router.get('/profile', async (req, res) => {
+/*router.get('/profile', async (req, res) => {
     try {
         const user = await User.findOne({ where: { email } });
         if (!user) {
@@ -60,6 +60,6 @@ router.get('/profile', async (req, res) => {
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
-});
+});*/
 
 module.exports = router;
