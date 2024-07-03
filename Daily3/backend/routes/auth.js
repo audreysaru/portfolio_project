@@ -1,7 +1,7 @@
 const express = require('express');
 const argon2 = require('argon2');
 const jwt = require('jsonwebtoken');
-const { User } = require('../models');
+const { User } = require('../models/user');
 
 const router = express.Router();
 
