@@ -4,11 +4,13 @@ const cors = require('cors');
 const { sequelize } = require('./models');
 
 const app = express();
+
 app.use(cors({
     origin: 'https://daily3-frontend.onrender.com',
     credentials: true
 }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use((req, res, next) => {
     if (req.headers['x-forwarded-proto'] !== 'https') {
@@ -22,7 +24,7 @@ const activitiesRoutes = require('./routes/activities');
 const remindersRoutes = require('./routes/reminders');
 const userRoutes = require('./routes/userRoutes');
 
-app.use('/api', authRoutes);
+app.use('/api/auth', authRoutes);
 app.use('/api', activitiesRoutes);
 app.use('/api/reminders', remindersRoutes);
 app.use('/api/users', userRoutes);

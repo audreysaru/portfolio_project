@@ -50,16 +50,4 @@ router.get('/profile', async (req, res) => {
     }
 });
 
-/*router.get('/profile', async (req, res) => {
-    try {
-        const user = await User.findOne({ where: { email } });
-        if (!user) {
-            return res.status(404).json({ message: 'User profile not found' });
-        }
-        res.json(user);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});*/
-
 module.exports = router;
