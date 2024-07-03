@@ -34,7 +34,7 @@ router.post('/login', async (req, res) => {
     }
 });
 
-/*router.get('/profile', async (req, res) => {
+router.get('/profile', async (req, res) => {
     try {
         const authHeader = req.headers['authorization'];
         const token = authHeader && authHeader.split(' ')[1];
@@ -48,7 +48,7 @@ router.post('/login', async (req, res) => {
     } catch (error) {
         res.status(400).json({ error: error.message });
     }
-});*/
+});
 
 /*router.get('/profile', async (req, res) => {
     try {
