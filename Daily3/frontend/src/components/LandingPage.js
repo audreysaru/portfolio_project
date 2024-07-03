@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LandingPage.css';
+import welcomeImage from '../assets/images/welcome.jpg';
+import getStartedImage from '../assets/images/get-started.jpg';
 
 const LandingPage = () => {
     const [slideIndex, setSlideIndex] = useState(0);
@@ -9,12 +11,12 @@ const LandingPage = () => {
     const slides = [
         {
             id: 1,
-            image: '../assets/images/welcome.jpg',
+            image: welcomeImage,
             text: 'Elevate your mood, energy, and focus through the Daily 3 activities.',
         },
         {
             id: 2,
-            image: '../assets/images/get-started.jpg',
+            image: getStartedImage,
             text: 'Get started with Daily3 today!',
         },
     ];

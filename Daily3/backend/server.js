@@ -4,7 +4,10 @@ const cors = require('cors');
 const { sequelize } = require('./models');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://daily3-frontend.onrender.com',
+    credentials: true
+}));
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {

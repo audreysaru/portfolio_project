@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://daily3-backend.onrender.com/api';
+const API_URL = process.env.REACT_APP_API_URL || 'https://daily3-backend.onrender.com/api';
 
 export const signup = (userData) => axios.post(`${API_URL}/signup`, userData);
 export const login = (userData) => axios.post(`${API_URL}/login`, userData);
