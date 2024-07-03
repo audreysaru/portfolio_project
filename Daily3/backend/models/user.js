@@ -1,5 +1,4 @@
 const { DataTypes } = require('sequelize');
-const argon2 = require('argon2');
 const sequelize = require('../config/database');
 
 const User = sequelize.define('User', {
@@ -39,4 +38,4 @@ User.beforeCreate(async (user) => {
     user.password = await argon2.hash(user.password);
 });
 
-module.exports = (sequelize) => User;
+module.exports = User;

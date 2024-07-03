@@ -1,7 +1,7 @@
 const express = require('express');
 const argon2 = require('argon2');
 const jwt = require('jsonwebtoken');
-const { User } = require('../models/user');
+const User = require('../models/user');
 
 const router = express.Router();
 
@@ -9,7 +9,7 @@ router.post('/signup', async (req, res) => {
     const { firstName, lastName, username, email, password, birthday } = req.body;
 
     try {
-        const hashedPassword = await argon2.hash(password, 10);
+        const hashedPassword = await argon2.hash(password);
         const user = await User.create({ firstName, lastName, username, email, password: hashedPassword, birthday });
 
         res.status(201).json(user);
